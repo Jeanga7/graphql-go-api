@@ -1,0 +1,19 @@
+
+type User {
+    id: ID!
+    username: String!
+    email: String!
+    createdAt: String!
+}
+
+# Query pour obtenir un user
+type Query {
+    getUser(id: ID!): User!
+    listUsers: [User!]!
+}
+
+# Mutation User (create, Update)
+type Mutation {
+    createUser(username: String!, email: String!): User!
+    updateUser(id: ID!, username: String!, email: String!): User!
+}
